@@ -13,7 +13,7 @@ default-lazy-init="true">
 
 	<!-- @Controller inherits @Component package name -->
 	<context:component-scan
-		base-package="controller"/>
+		base-package="controller,service"/>
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

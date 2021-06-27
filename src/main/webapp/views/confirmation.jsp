@@ -6,19 +6,39 @@
     
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>註冊資料確認</title>
-</head>
-<body>
-	帳號 : ${member.account} <br>
-	密碼 : ${member.password}  <br>
-	姓名 : ${member.name}  <br>
-	信箱 : ${member.email}  <br>
-	地址 : ${member.address}  <br>
-	電話 : ${member.phone}  <br>
-	生日 : ${member.birthday}  <br>
-	身高 : ${member.height}  <br>
-	體重 : ${member.weight}  <br>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>會員註冊資訊</title>
+    <link rel="stylesheet" href="<c:url value="/css/confirmation.css"/>" />
+  </head>
+  <body>
+    <strong id="hello">註冊成功</strong>
+    <div id="midBox">
+      <table>
+        <tr>
+          <td>帳號 : ${member.account}</td>
+          <td>密碼 : ${member.password}</td>
+        </tr>
+        <tr>
+          <td>姓名 : ${member.name}</td>
+          <td>生日 : ${member.birthday}</td>
+        </tr>
+        <tr>
+          <td>電話 : ${member.phone}</td>
+          <td>信箱 : ${member.email}</td>
+        </tr>
+        <tr>
+          <td>地址 : ${member.address}</td>
+        </tr>
+        <tr>
+          <td>身高 : ${member.height}</td>
+          <td>體重 : ${member.weight}</td>
+        </tr>
+        <tr>
+          <td>BMI : ${member.bmi}</td>
+          <td>註冊時間 : ${member.registerDate}</td>
+        </tr>
+      </table>
+    </div>
+  </body>
 </html>

@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+body {
+  background: linear-gradient(45deg, #85c7f2, #e1faf9);
+  height: 100vh;
+}
+
+table {
+  font-size: 20px;
+  color: #4c4c4c;
+}
+
+td {
+  padding: 10px;
+}
+
+#midBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+
+  width: 50%;
+  height: 50%;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.15);
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+#hello {
+  position: absolute;
+  font-size: 40px;
+  color: #4c4c4c;
+  top: 23%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
