@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0px;
+  font-size: 18px;
+}
+
+body {
+  background: linear-gradient(45deg, #85c7f2, #e1faf9);
+  height: 100vh;
+}
+
+table {
+  display: flex;
+  width: 100%;
+  border-spacing: 0px 20px;
+}
+
+#midBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  padding: 20px;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+
+  width: 50%;
+  height: 55%;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.15);
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+#hello {
+  position: absolute;
+  font-size: 40px;
+  color: #4c4c4c;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+button {
+  position: absolute;
+  top: 87%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  outline-color: #e1faf9;
+  border-radius: 20px;
+  width: 30%;
+  background-color: transparent;
+}
