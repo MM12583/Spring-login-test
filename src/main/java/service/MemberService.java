@@ -14,12 +14,25 @@ public class MemberService {
 	
 	@Autowired
 	MemberDAO dao ;
+	
+	@Autowired
+	MyPasswordEncoder pe ;
+
 
 	public MemberService() {
 	}
 
 	public MemberService(MemberDAO dao) {
 		this.dao = dao;
+	}
+
+	public MemberService(MyPasswordEncoder pe) {
+		this.pe = pe;
+	}
+	
+	public MemberService(MemberDAO dao, MyPasswordEncoder pe) {
+		this.dao = dao;
+		this.pe = pe;
 	}
 
 	// 註冊時間
@@ -40,5 +53,10 @@ public class MemberService {
 	// insert 會員
 	public Member insertMember(Member bean) throws SQLException {
 		return dao.insertMember(bean);
+	}
+	
+	// 加密
+	public String passwordEncoder(String password) {
+		return pe.encryption(password) ;
 	}
 }

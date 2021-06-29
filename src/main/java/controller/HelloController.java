@@ -49,6 +49,8 @@ public class HelloController {
 		// add member info
 		member.setRegisterDate(memberService.registerDate());
 		member.setBmi(memberService.calBMI(member));
+		// 加密
+		member.setPassword(memberService.passwordEncoder(member.getPassword()));
 		
 		// add MySQL
 		try {

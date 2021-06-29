@@ -1,5 +1,7 @@
 package service;
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -32,13 +34,40 @@ public class MemberDAO {
 		// save the Member object
 		System.out.println("儲存會員資料");
 		session.save(bean) ;
-		// commit transaction
+		// commit transaction ; commit 會印出儲存物件
 		session.getTransaction().commit();
 		System.out.println("儲存成功 ! ");
 			
 //		session.close(); // server 啟動後不關閉
 		
-		return bean;
-		
+		return null ;
+	}
+	
+	// retrieve member with P.K (id)
+	public Member retrieveMemberId(int id) {
+		System.out.println("開始交易");
+		session.beginTransaction() ;
+		System.out.println("讀取會員資料");		
+		Member member = session.get(Member.class, id);
+		return member;	
+	}
+	
+	// select all
+	public List<Member> selectAll(){
+		List<Member> members = session.createQuery("from member").getResultList();
+		return members;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
